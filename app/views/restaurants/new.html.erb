@@ -2,8 +2,8 @@
   <%= f.input :name %>
   <%= f.input :address %>
   <%= f.input :phone_number %>
-  <%= f.select :category %>
+  <%= f.input :category, collection: Restaurant::CATEGORIES%>
   <%= f.submit "create a restaurant", class: "btn btn-primary" %>
 <% end %>
-
-<%= link_to "index" restaurants_path, class: "btn btn-primary" %>
+<%#  %>
+<%= link_to "index", restaurants_path, class: "btn btn-primary" %>
