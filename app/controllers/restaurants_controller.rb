@@ -15,9 +15,9 @@ class RestaurantsController < ApplicationController
   def create
     @restaurant = Restaurant.new(user_params)
     if @restaurant.save
-      redirect_to restaurant_path(@restaurant)
+      redirect_to restaurant_path(@restaurant) # show du restaurant en question
     else
-      render :new
+      render 'new'
     end
   end
 
